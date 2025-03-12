@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excel Functions</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body onload="initializeExcelPage()">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="excel.html">Excel</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Excel Functions Calculator</h2>
+      <form id="excel-form">
+        <label for="numbers">Enter numbers (space-separated):</label>
+        <input
+          type="text"
+          id="numbers"
+          placeholder="e.g., 10 20 30 40"
+          required
+        />
+
+        <fieldset class="radio-group">
+          <legend>Select Function:</legend>
+          <div>
+            <input
+              type="radio"
+              id="autosum"
+              name="excel-function"
+              value="autosum"
+              checked
+            />
+            <label for="autosum">AutoSum</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="average"
+              name="excel-function"
+              value="average"
+            />
+            <label for="average">Average</label>
+          </div>
+          <div>
+            <input type="radio" id="max" name="excel-function" value="max" />
+            <label for="max">Maximum</label>
+          </div>
+          <div>
+            <input type="radio" id="min" name="excel-function" value="min" />
+            <label for="min">Minimum</label>
+          </div>
+        </fieldset>
+
+        <button type="button" id="calculate-button">Calculate</button>
+      </form>
+
+      <div id="result">Result will be displayed here.</div>
+    </main>
+
+    <footer>
+      <p>Georgian @ ILAC - JavaScript Assignment#3 - Group 15</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
